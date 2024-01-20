@@ -20,7 +20,20 @@ class ViewController: UIViewController {
     
         someobj = Someobject()
         
+//        let roomNumber = 56 // Replace with the room number you want to check
+//
+//        let flrNumber = calculateCurrentFloor(roomNumber: roomNumber)
+//
+//        if flrNumber != -1 {
+//            print("Room \(roomNumber) is on Floor \(flrNumber)")
+//        } else {
+//            print("Invalid room number")
+//        }
+//
         
+        let roomNumber = 55
+        let floorNumber = findFloorNumber(for: roomNumber)
+        print("The room \(roomNumber) is on floor \(floorNumber).")
         // Do any additional setup after loading the view.
     }
     deinit{
@@ -28,7 +41,48 @@ class ViewController: UIViewController {
         print("viewController deinitalized")
     }
     
+  
     
+    func calculateCurrentFloor(roomNumber: Int) -> Int {
+        if roomNumber > 0 {
+            var presntFlr = 1
+            var pendingRooms = roomNumber
+            
+            while pendingRooms > 0 {
+                let roomsOnCurrentFloor = presntFlr % 2 == 1 ? 10 : 5
+                let value = presntFlr % 2 == 1
+                print(value)
+                
+                
+                print(roomsOnCurrentFloor)
+                if pendingRooms <= roomsOnCurrentFloor {
+                    print(presntFlr)
+                    return presntFlr
+                } else {
+                    pendingRooms -= roomsOnCurrentFloor
+                    presntFlr += 1
+                }
+            }
+        }
+        
+        // Invalid room number
+        return -1
+        
+        
+}
+    
+    func findFloorNumber(for roomNumber: Int) -> Int {
+        let roomsPerFirstFloor = 10
+        let roomsPerAlternateFloor = 5
+        
+        if roomNumber <= roomsPerFirstFloor {
+            return (roomNumber - 1) / roomsPerFirstFloor + 1
+        } else {
+            let additionalRooms = roomNumber - roomsPerFirstFloor
+            let alternateFloors = (additionalRooms - 1) / roomsPerAlternateFloor + 1
+            return  alternateFloors
+        }
+    }
     
     
 }
