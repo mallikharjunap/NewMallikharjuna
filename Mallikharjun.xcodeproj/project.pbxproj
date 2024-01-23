@@ -13,6 +13,8 @@
 		1827929D2B50048A00031646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1827929B2B50048A00031646 /* Main.storyboard */; };
 		1827929F2B50049900031646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1827929E2B50049900031646 /* Assets.xcassets */; };
 		182792A22B50049900031646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182792A02B50049900031646 /* LaunchScreen.storyboard */; };
+		18F05CFF2B5C0526002A641F /* ApiServers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F05CFE2B5C0526002A641F /* ApiServers.swift */; };
+		18F05D012B5F57A9002A641F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F05D002B5F57A9002A641F /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1827929E2B50049900031646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182792A12B50049900031646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182792A32B50049900031646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F05CFE2B5C0526002A641F /* ApiServers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServers.swift; sourceTree = "<group>"; };
+		18F05D002B5F57A9002A641F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				182792952B50048A00031646 /* AppDelegate.swift */,
+				18F05D002B5F57A9002A641F /* UserModel.swift */,
+				18F05CFE2B5C0526002A641F /* ApiServers.swift */,
 				182792972B50048A00031646 /* SceneDelegate.swift */,
 				182792992B50048A00031646 /* ViewController.swift */,
 				1827929B2B50048A00031646 /* Main.storyboard */,
@@ -141,6 +147,8 @@
 				1827929A2B50048A00031646 /* ViewController.swift in Sources */,
 				182792962B50048A00031646 /* AppDelegate.swift in Sources */,
 				182792982B50048A00031646 /* SceneDelegate.swift in Sources */,
+				18F05D012B5F57A9002A641F /* UserModel.swift in Sources */,
+				18F05CFF2B5C0526002A641F /* ApiServers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

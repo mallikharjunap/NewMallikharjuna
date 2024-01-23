@@ -34,7 +34,33 @@ class ViewController: UIViewController {
         let roomNumber = 55
         let floorNumber = findFloorNumber(for: roomNumber)
         print("The room \(roomNumber) is on floor \(floorNumber).")
-        // Do any additional setup after loading the view.
+        
+        getDate()
+        
+        
+    }
+    
+    
+    func getDate(){
+        
+        ApiServers.shared.getFetchDate(apiString: "") { results in
+            
+            switch results {
+                
+            case .success(let posts):
+                for post in posts {
+                    
+                    print("Title :\(post.title)\n Body : \(post.body)")
+                }
+            case .failure(let error):
+               print(error)
+            }
+            
+            
+            
+        }
+        
+        
     }
     deinit{
        
